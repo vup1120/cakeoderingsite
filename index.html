@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>手作蛋糕预订｜慕尼黑 Pasing</title>
+<meta name="description" content="巴斯克芝士蛋糕、奶油戚风和蛋糕卷，接单后新鲜制作，慕尼黑 Pasing 自取。">
+<meta name="theme-color" content="#FFFEF7">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233E322D'/%3E%3Ctext x='32' y='46' font-size='42' text-anchor='middle' fill='%23FFFEF7' font-family='Georgia,serif' font-style='italic'%3EY%3C/text%3E%3C/svg%3E">
+<style>
+/* 字体放在 fonts 文件夹（OFL 授权），不连 Google；中文用手机自带字体 */
+@font-face{font-family:"Jost";font-style:normal;font-weight:300;font-display:swap;src:url("fonts/jost-latin-300-normal.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Jost";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/jost-latin-400-normal.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Jost";font-style:normal;font-weight:500;font-display:swap;src:url("fonts/jost-latin-500-normal.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Jost";font-style:normal;font-weight:600;font-display:swap;src:url("fonts/jost-latin-600-normal.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:600;font-display:swap;src:url("fonts/cormorant-garamond-latin-600-normal.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Sacramento";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/sacramento-latin-400-normal.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:500;font-display:swap;src:url("fonts/cormorant-garamond-latin-500-italic.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:600;font-display:swap;src:url("fonts/cormorant-garamond-latin-600-italic.woff2") format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+/* 霞鹜文楷（OFL）：只含本站用到的中文字，用于店名和标题；新增的字会先用系统字体 */
+@font-face{font-family:"LXGW WenKai";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/lxgw-wenkai-subset.woff2") format("woff2")}
+/* 龙藏体（OFL）：只含「妍手作」三个字，用于店名，像鹅毛笔的笔迹 */
+@font-face{font-family:"Long Cang";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/long-cang-yan.woff2") format("woff2")}
+:root{
+  color-scheme: light;
+  --paper:#FFFEF7; --beige:#EFEDE4; --tile:#F4F3EE; --bubble:#F9F8F3;
+  --ink:#3E322D; --muted:#6F6560; --line:#E2DED3; --line-strong:#C9C2B6;
+  --btn:#4A3B35; --btn-ink:#FFFEF7;
+  --plum:#54303B; --plum-ink:#FFFEF7; --plum-muted:#EADDE0;
+  --tag:#E7E5DF; --tag-ink:#5E5650;
+  --foot:#3E322D; --foot-ink:#FFFEF7; --foot-muted:#D9D0C8;
+  --tint-butter:#F5F0E1; --tint-sage:#EDF0E6; --tint-stone:#ECEBE7; --tint-sand:#F3EDE5; --tint-rose:#F4EAE8; --tint-lilac:#EFEBF2;
+  --error:#A3352B;
+  --sans:"Jost","Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  --serif:"Cormorant Garamond","Noto Serif SC","Songti SC",Georgia,serif;
+  --script:"Sacramento","Snell Roundhand","Segoe Script",cursive;
+  --art:"Cormorant Garamond","LXGW WenKai","Kaiti SC","STKaiti","Songti SC",serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --paper:#1D1916; --beige:#26211D; --tile:#2C2622; --bubble:#332C27;
+    --ink:#EFE9E1; --muted:#B8ADA4; --line:#3A332D; --line-strong:#5A5048;
+    --btn:#EFE9E1; --btn-ink:#1D1916;
+    --plum:#4A2832; --plum-ink:#FFFEF7; --plum-muted:#E3D3D7;
+    --tag:#3A332D; --tag-ink:#D9D0C8;
+    --foot:#14110F; --foot-ink:#EFE9E1; --foot-muted:#B8ADA4;
+    --tint-butter:#2E2A22; --tint-sage:#292D26; --tint-stone:#2B2A27; --tint-sand:#2E2924; --tint-rose:#302826; --tint-lilac:#2C2830;
+    --error:#F08A7E;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --paper:#1D1916; --beige:#26211D; --tile:#2C2622; --bubble:#332C27;
+  --ink:#EFE9E1; --muted:#B8ADA4; --line:#3A332D; --line-strong:#5A5048;
+  --btn:#EFE9E1; --btn-ink:#1D1916;
+  --plum:#4A2832; --plum-ink:#FFFEF7; --plum-muted:#E3D3D7;
+  --tag:#3A332D; --tag-ink:#D9D0C8;
+  --foot:#14110F; --foot-ink:#EFE9E1; --foot-muted:#B8ADA4;
+  --tint-butter:#2E2A22; --tint-sage:#292D26; --tint-stone:#2B2A27; --tint-sand:#2E2924; --tint-rose:#302826; --tint-lilac:#2C2830;
+  --error:#F08A7E;
+}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--beige);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--paper)}
+.page{max-width:520px;margin:0 auto;background:var(--paper);position:relative}
+img{max-width:100%;display:block}
+a{color:var(--ink)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+svg.i{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.art svg{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+[hidden]{display:none!important}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;align-items:center;gap:4px;height:64px;padding:0 6px 0 4px;background:var(--paper);border-bottom:1px solid var(--line)}
+.icon-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border:0;background:transparent;color:var(--ink);cursor:pointer;text-decoration:none}
+.brand{flex:1;min-width:0;padding-left:6px;display:flex;align-items:baseline;gap:9px;color:var(--ink);text-decoration:none;white-space:nowrap;overflow:hidden}
+.brand .en{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:600;font-size:27px;line-height:1;letter-spacing:.01em}
+.brand .zh{font-family:"Long Cang","LXGW WenKai","Kaiti SC","STKaiti",cursive;font-weight:400;font-size:30px;line-height:1;letter-spacing:.04em}
+.divider{width:1px;height:28px;background:var(--line-strong)}
+.badge{position:absolute;top:3px;right:1px;min-width:20px;height:20px;padding:0 5px;border-radius:10px;background:var(--ink);color:var(--paper);font-size:12px;line-height:20px;text-align:center;font-weight:500}
+.menu{position:absolute;left:0;right:0;top:100%;background:var(--paper);border-bottom:1px solid var(--line);padding:4px 20px 16px}
+.menu a{display:flex;align-items:center;justify-content:space-between;min-height:54px;border-bottom:1px solid var(--line);text-decoration:none;letter-spacing:.1em}
+.menu a::after{content:"›";font-size:22px;font-weight:300;color:var(--muted)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:16px;min-height:54px;padding:0 26px;border:2px solid transparent;border-radius:2px;font-weight:500;font-size:16px;letter-spacing:.16em;text-decoration:none;cursor:pointer}
+.btn-dark{background:var(--btn);color:var(--btn-ink)}
+.btn-outline{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn-light{background:#FFFEF7;color:#3E322D;font-weight:400}
+.btn-wide{width:100%}
+
+/* hero */
+.hero{position:relative;color:#FFFEF7}
+.hero img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+.hero-copy{position:absolute;left:0;right:0;top:6%;padding:0 16px;text-align:center}
+.script{display:block;font-family:var(--script);font-size:46px;line-height:1;font-weight:400;transform:rotate(-4deg)}
+.hero h1{margin:8px 0 0;font-family:var(--art);font-weight:400;font-size:26px;line-height:1.45;letter-spacing:.16em}
+/* 浅色背景的封面照片：文字改深色、缩小，放在照片最上方 */
+.hero.ink{color:#3E322D}
+.hero.ink .hero-copy{top:2.5%}
+.hero.ink .script{font-size:36px}
+.hero.ink h1{margin-top:2px;font-size:22px;font-weight:400}
+.hero .btn{position:absolute;left:50%;bottom:4.5%;transform:translateX(-50%);min-width:66%;justify-content:space-between;padding:0 22px 0 28px;font-weight:600;box-shadow:0 4px 18px rgba(40,30,25,.22)}
+.hero .btn svg{width:30px;height:30px}
+
+/* headings */
+.h-center{margin:0;text-align:center;font-family:var(--art);font-weight:400;font-size:25px;line-height:1.45;letter-spacing:.18em}
+.h-left{margin:0;font-family:var(--art);font-weight:400;font-size:19px;line-height:1.45;letter-spacing:.14em}
+.h-big{margin:0;font-family:var(--art);font-weight:400;font-size:31px;line-height:1.4;letter-spacing:.14em}
+.lead{margin:12px 0 0;color:var(--muted);font-weight:300}
+
+/* categories */
+.cats-sec{background:var(--beige);padding:44px 10px 36px}
+.cats{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px 6px}
+.cats a{display:flex;flex-direction:column;align-items:center;gap:12px;text-decoration:none;font-family:var(--art);font-size:16px;line-height:1.4;letter-spacing:.12em;text-align:center}
+.bubble{width:min(100%,112px);aspect-ratio:1/1;border-radius:50%;background:var(--bubble);display:flex;align-items:center;justify-content:center}
+.bubble svg{width:64%;height:64%}
+
+/* product cards */
+.disc{background:var(--beige);padding:20px 0 52px}
+.disc .h-left{padding:0 20px}
+.rail{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:20px;padding:22px 20px 4px;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail .card{flex:0 0 min(64%,250px);scroll-snap-align:start}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 16px;margin-top:30px}
+.card{display:flex;flex-direction:column;min-width:0}
+.media{position:relative;display:block;width:100%;aspect-ratio:7/9;padding:0;border:0;background:var(--tile);overflow:hidden;cursor:pointer;color:var(--ink)}
+.media img{width:100%;height:100%;object-fit:cover}
+.media .art{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.media .art svg{width:56%;height:auto}
+.tag{position:absolute;left:12px;bottom:12px;padding:3px 9px;background:var(--tag);color:var(--tag-ink);font-size:12px;line-height:1.5;letter-spacing:.08em}
+.info{display:flex;align-items:flex-start;justify-content:space-between;gap:6px;margin-top:14px}
+.name{font-family:var(--art);font-weight:400;font-size:17px;line-height:1.4;letter-spacing:.04em}
+.price{margin-top:4px;color:var(--muted);font-weight:300;font-size:16px}
+.add{flex:0 0 auto;margin:-8px -8px 0 0}
+.add svg{width:34px;height:34px}
+
+/* chiffon feature */
+.feature img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 42%}
+.plum{background:var(--plum);color:var(--plum-ink);padding:40px 20px 46px}
+.plum h2{margin:0;font-family:var(--art);font-weight:400;font-size:29px;line-height:1.45;letter-spacing:.14em}
+.plum p{margin:16px 0 0;color:var(--plum-muted);font-weight:300;font-size:17px;line-height:1.75}
+.plum .btn{margin-top:30px}
+
+section.pad{padding:52px 20px}
+
+/* sizes */
+.sizes-sec{background:var(--beige);padding:48px 20px}
+table{width:100%;border-collapse:collapse;margin-top:26px}
+th,td{padding:14px 0;text-align:right;font-weight:300}
+th:first-child{text-align:left}
+thead th{padding:0 0 10px;font-size:14px;color:var(--muted);letter-spacing:.1em}
+tbody tr{border-top:1px solid var(--line-strong)}
+tbody tr:last-child{border-bottom:1px solid var(--line-strong)}
+tbody th{font-weight:500;letter-spacing:.06em}
+td{font-size:18px}
+.small{margin:16px 0 0;font-size:14px;color:var(--muted);text-align:center}
+.center{text-align:center;margin-top:28px}
+
+/* basket */
+.lines{margin-top:24px;border-top:1px solid var(--line)}
+.line{display:grid;grid-template-columns:68px minmax(0,1fr) auto;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.thumb{position:relative;width:68px;aspect-ratio:7/9;background:var(--tile);overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb .art{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.thumb .art svg{width:76%}
+.line-name{font-weight:500;line-height:1.4}
+.line-size{margin-top:6px;min-height:40px;padding:6px 8px;border:1px solid var(--line-strong);border-radius:2px;background:var(--paper);color:var(--ink);font:inherit;font-size:14px}
+.line-meta{margin-top:4px;color:var(--muted);font-size:14px}
+.line-tools{display:flex;align-items:center;gap:10px;margin-top:8px;flex-wrap:wrap}
+.line-price{font-weight:400;white-space:nowrap}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--line-strong);border-radius:2px}
+.qty button{width:44px;height:44px;border:0;background:transparent;cursor:pointer;font-size:20px;font-weight:300}
+.qty output{min-width:28px;text-align:center;font-weight:500}
+.remove{min-height:44px;padding:0 4px;border:0;background:none;color:var(--muted);font-size:14px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.empty{margin-top:24px;padding:28px 20px;background:var(--tile);text-align:center}
+.empty p{margin:0 0 16px;color:var(--muted)}
+.sum{display:flex;align-items:baseline;justify-content:space-between;margin:20px 0 0}
+.sum strong{font-size:28px;font-weight:400}
+.form{display:flex;flex-direction:column;gap:20px;margin-top:32px}
+.field{display:flex;flex-direction:column;gap:6px}
+.label{font-size:14px;font-weight:500;letter-spacing:.1em}
+.hint{margin:0;font-size:13px;color:var(--muted)}
+input,textarea{width:100%;min-height:52px;padding:12px 14px;border:1px solid var(--line-strong);border-radius:2px;background:var(--paper);color:var(--ink);font:inherit}
+textarea{min-height:100px;resize:vertical}
+[aria-invalid="true"]{border-color:var(--error)}
+.error{margin:0;color:var(--error);font-size:14px;font-weight:500}
+.status{margin:0;min-height:1.6em;text-align:center;font-size:14px;color:var(--muted)}
+
+/* faq */
+.faq{margin-top:22px;border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line)}
+summary{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px;list-style:none;cursor:pointer;font-weight:500;letter-spacing:.08em}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:28px;font-weight:300;line-height:1}
+details[open] summary::after{content:"−"}
+details p{margin:0 0 18px;color:var(--muted);font-weight:300}
+
+footer{background:var(--foot);color:var(--foot-ink);padding:48px 20px calc(96px + env(safe-area-inset-bottom,0px))}
+footer .brand{padding:0;color:var(--foot-ink)}
+footer .brand .en{font-size:32px}
+footer .brand .zh{font-size:36px}
+footer p{margin:10px 0 0;color:var(--foot-muted);font-weight:300}
+footer a{color:var(--foot-ink)}
+.contacts{display:flex;flex-direction:column;gap:6px;margin-top:18px}
+.legal{display:flex;gap:24px;margin:24px 0 0;font-size:14px}
+.legal a{display:inline-flex;align-items:center;min-height:44px;text-underline-offset:3px}
+
+/* floating basket + toast */
+.fab{position:fixed;right:max(16px,calc(50% - 244px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:15;width:64px;height:64px;border-radius:50%;background:var(--btn);color:var(--btn-ink);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(40,30,25,.28);text-decoration:none}
+.fab svg{width:30px;height:30px}
+.fab .badge{top:6px;right:6px;background:var(--paper);color:var(--ink)}
+.toast{position:fixed;left:50%;width:max-content;bottom:calc(100px + env(safe-area-inset-bottom,0px));z-index:40;transform:translateX(-50%);max-width:calc(100% - 40px);padding:12px 18px;border-radius:2px;background:var(--ink);color:var(--paper);font-size:14px;letter-spacing:.04em;opacity:0;pointer-events:none;transition:opacity .2s}
+.toast.show{opacity:1}
+
+/* product sheet */
+dialog.sheet{width:100%;max-width:520px;height:100%;max-height:100%;margin:0 auto;padding:0;border:0;background:var(--paper);color:var(--ink);overflow-y:auto}
+dialog.sheet[open]{display:flex;flex-direction:column}
+dialog.sheet>*{flex-shrink:0}
+.sheet-body{flex:1 0 auto}
+dialog.sheet::backdrop{background:rgba(30,22,18,.5)}
+.sheet-close{position:absolute;top:calc(8px + env(safe-area-inset-top,0px));right:8px;z-index:2;background:var(--paper);border-radius:2px}
+.crumbs{padding:calc(20px + env(safe-area-inset-top,0px)) 64px 14px 20px;font-size:14px;letter-spacing:.12em;color:var(--muted)}
+.sheet-media{position:relative;aspect-ratio:3/4;background:var(--tile);overflow:hidden}
+.gallery{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.gallery::-webkit-scrollbar{display:none}
+.gallery img{flex:0 0 100%;width:100%;height:100%;object-fit:cover;scroll-snap-align:start}
+.dots{display:flex;justify-content:center;gap:7px;padding-top:16px}
+.dots span{width:7px;height:7px;border-radius:50%;background:var(--line-strong)}
+.dots span.on{background:var(--ink)}
+.sheet-media img{width:100%;height:100%;object-fit:cover}
+.sheet-media .art{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.sheet-media .art svg{width:46%}
+.sheet-body{padding:26px 20px 32px}
+.sheet-body h2{margin:0;font-family:var(--art);font-weight:400;font-size:22px;line-height:1.45;letter-spacing:.12em}
+.sheet-body .desc{margin:8px 0 0;color:var(--muted);font-weight:300}
+.opt{margin-top:26px}
+.sizes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:8px}
+.size{min-height:60px;padding:6px 4px;border:1px solid var(--line-strong);border-radius:2px;background:transparent;cursor:pointer;line-height:1.35;letter-spacing:.06em}
+.size small{display:block;font-size:14px;color:var(--muted)}
+.size[aria-pressed="true"]{border:2px solid var(--ink);font-weight:600}
+.sheet-bar{position:sticky;bottom:0;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px calc(14px + env(safe-area-inset-bottom,0px));background:var(--paper);border-top:1px solid var(--line)}
+.sheet-price{font-size:30px;font-weight:400;white-space:nowrap}
+.sheet-bar .btn{flex:1;max-width:240px}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="top">
+  <button class="icon-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="打开菜单">
+    <svg class="i" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 9h22M5 16h22M5 23h22"/></svg>
+  </button>
+  <a class="brand js-logo" href="#" aria-label="Atelier Yan 妍手作"></a>
+  <span class="divider" aria-hidden="true"></span>
+  <a class="icon-btn" href="#order" aria-label="预订单">
+    <svg class="i" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 13h24l-2.6 11.6a2 2 0 0 1-2 1.6H8.6a2 2 0 0 1-2-1.6z"/><path d="M11 13l4-7M21 13l-4-7"/></svg>
+    <span class="badge js-count">0</span>
+  </a>
+  <nav class="menu" id="menu" aria-label="网站导航" hidden>
+    <a href="#basque">风味巴斯克</a>
+    <a href="#chiffon">奶油戚风</a>
+    <a href="#weekly">蛋糕卷与小点心</a>
+    <a href="#sizes">尺寸与价格</a>
+    <a href="#order">我的预订单</a>
+    <a href="#faq">预订须知</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero ink">
+  <img src="images/strawberry-matcha-3.jpg" width="1200" height="902" alt="草莓抹茶巴斯克，粉色草莓奶油上放着切开的草莓" style="object-position:37% center">
+  <div class="hero-copy">
+    <span class="script" aria-hidden="true">frisch gebacken</span>
+    <h1>慕尼黑现做的手作蛋糕</h1>
+  </div>
+  <a class="btn btn-light" href="#basque">
+    <span>开始挑选</span>
+    <svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M20 4c.8 4.6 2.4 6.2 7 7-4.6.8-6.2 2.4-7 7-.8-4.6-2.4-6.2-7-7 4.6-.8 6.2-2.4 7-7z"/><path d="M9 17c.4 2.3 1.2 3.1 3.5 3.5-2.3.4-3.1 1.2-3.5 3.5-.4-2.3-1.2-3.1-3.5-3.5 2.3-.4 3.1-1.2 3.5-3.5z"/></svg>
+  </a>
+</section>
+
+<section class="cats-sec" aria-labelledby="cats-title">
+  <h2 class="h-center" id="cats-title">热门分类</h2>
+  <ul class="cats" id="cats"></ul>
+</section>
+
+<section class="disc" id="basque" aria-labelledby="basque-title">
+  <h2 class="h-left" id="basque-title">风味巴斯克</h2>
+  <div class="rail" id="basque-rail"></div>
+</section>
+
+<section class="feature" id="chiffon" aria-labelledby="chiffon-title">
+  <img src="images/chestnut-chiffon-2.jpg" width="900" height="1200" loading="lazy" alt="画着笑脸的栗子可可戚风蛋糕，顶上堆满栗子泥和糖渍栗子" style="object-position:center 58%">
+  <div class="plum">
+    <h2 id="chiffon-title">奶油戚风，<br>照你的想法做</h2>
+    <p>口味、夹心和装饰都可以一起商量，复杂造型另行报价。生日蛋糕请至少提前 2 天预订。</p>
+    <button class="btn btn-light" type="button" id="chiffon-open">定制生日蛋糕</button>
+  </div>
+  <div style="padding:44px 20px 12px">
+    <h3 class="h-left">戚风蛋糕</h3>
+    <div class="grid" id="chiffon-grid" style="margin-top:22px"></div>
+  </div>
+</section>
+
+<section class="pad" id="weekly" aria-labelledby="weekly-title">
+  <h2 class="h-big" id="weekly-title">本周的蛋糕卷<br>与小点心</h2>
+  <p class="lead">以当周供应为准，蛋糕卷整条或半条都可以订。标「待定」的品项还在确认口味或价格，可以先下单询问。</p>
+  <div class="grid" id="weekly-grid"></div>
+</section>
+
+<section class="sizes-sec" id="sizes" aria-labelledby="sizes-title">
+  <h2 class="h-center" id="sizes-title">尺寸与价格</h2>
+  <table>
+    <thead><tr><th scope="col">款式</th><th scope="col">4寸</th><th scope="col">6寸</th><th scope="col">8寸</th></tr></thead>
+    <tbody id="price-rows"></tbody>
+  </table>
+  <p class="small">1 寸约 2.5 cm，4 寸直径约 10 cm。可定制口味、夹心及装饰。</p>
+  <div class="center"><a class="btn btn-outline" href="#basque">开始挑选</a></div>
+</section>
+
+<section class="pad" id="order" aria-labelledby="order-title">
+  <h2 class="h-big" id="order-title">我的预订单</h2>
+  <div id="lines"></div>
+  <p class="sum" id="sum-row" hidden><span>预计合计</span><strong id="sum">0 €</strong></p>
+
+  <div class="form">
+    <div class="field">
+      <label class="label" for="date">取货日期</label>
+      <input id="date" type="date" required aria-describedby="date-hint">
+      <p class="hint" id="date-hint">慕尼黑 Pasing 自取，具体时间确认订单时再约。</p>
+    </div>
+    <div class="field">
+      <label class="label" for="name">称呼</label>
+      <input id="name" type="text" autocomplete="name" placeholder="怎么称呼你" required>
+    </div>
+    <div class="field">
+      <label class="label" for="memo">备注（选填）</label>
+      <textarea id="memo" rows="3" placeholder="蛋糕上要写的字、想要的装饰等"></textarea>
+    </div>
+    <p class="error" id="form-error" role="alert" hidden></p>
+    <button type="button" class="btn btn-dark btn-wide" id="send-wa">用 WhatsApp 发送预订</button>
+    <button type="button" class="btn btn-outline btn-wide" id="copy-order">复制订单，发微信</button>
+    <p class="status" id="status" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="pad" id="faq" aria-labelledby="faq-title" style="padding-top:8px">
+  <h2 class="h-center" id="faq-title">预订须知</h2>
+  <div class="faq">
+    <details><summary>蛋糕什么时候做？</summary><p>接单后新鲜制作，不会提前做好放着。</p></details>
+    <details><summary>要提前多久预订？</summary><p>生日蛋糕请至少提前 2 天预订。</p></details>
+    <details><summary>可以定制吗？</summary><p>可以定制口味、夹心及装饰，复杂造型另行报价。</p></details>
+    <details><summary>在哪里取货？</summary><p>慕尼黑 Pasing 自取，确认订单时会约好时间。</p></details>
+    <details><summary>蛋糕卷每周都有吗？</summary><p>蛋糕卷及切块甜点以当周供应为准。</p></details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <span class="brand js-logo"></span>
+  <p>慕尼黑 Pasing 的手作蛋糕，接单后新鲜制作。</p>
+  <div class="contacts" id="contacts"></div>
+  <p class="legal"><a href="impressum.html">Impressum</a><a href="impressum.html#datenschutz">Datenschutz</a></p>
+</footer>
+
+</div>
+
+<a class="fab" href="#order" id="fab" aria-label="查看预订单" hidden>
+  <svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13h24l-2.6 11.6a2 2 0 0 1-2 1.6H8.6a2 2 0 0 1-2-1.6z"/><path d="M11 13l4-7M21 13l-4-7"/></svg>
+  <span class="badge js-count">0</span>
+</a>
+<p class="toast" id="toast" role="status" aria-live="polite"></p>
+
+<dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
+  <button class="icon-btn sheet-close" type="button" id="sheet-close" aria-label="关闭">
+    <svg class="i" viewBox="0 0 32 32" aria-hidden="true"><path d="M8 8l16 16M24 8L8 24"/></svg>
+  </button>
+  <div class="crumbs" id="sheet-crumbs"></div>
+  <div class="sheet-media" id="sheet-media"></div>
+  <div class="dots" id="sheet-dots" aria-hidden="true" hidden></div>
+  <div class="sheet-body">
+    <h2 id="sheet-title"></h2>
+    <p class="desc" id="sheet-desc"></p>
+    <fieldset class="opt" id="sheet-size-wrap" style="border:0;padding:0;margin:26px 0 0">
+      <legend class="label" id="sheet-size-label">尺寸</legend>
+      <div class="sizes" id="sheet-sizes"></div>
+    </fieldset>
+    <div class="opt">
+      <span class="label" id="sheet-qty-label">数量</span>
+      <div class="qty" role="group" aria-labelledby="sheet-qty-label" style="display:flex;width:max-content;margin-top:8px">
+        <button type="button" id="sheet-minus" aria-label="减少数量">−</button>
+        <output id="sheet-qty">1</output>
+        <button type="button" id="sheet-plus" aria-label="增加数量">+</button>
+      </div>
+    </div>
+  </div>
+  <div class="sheet-bar">
+    <span class="sheet-price" id="sheet-price">18 €</span>
+    <button class="btn btn-dark" type="button" id="sheet-add">加入预订单</button>
+  </div>
+</dialog>
+
+<script>
+/* ============ 只需要改这里 ============ */
+const CONFIG = {
+  shopNameEn: "Atelier Yan",   // 店名英文（斜体大字）
+  shopNameZh: "妍手作",        // 店名中文（文楷小字）
+  whatsapp: "491732756580",          // 国家码 + 号码，只写数字
+  whatsappLabel: "+49 173 2756580",  // 网站上显示的样子
+  wechat: "",     // 微信号，例如 "cake_pasing"
+  instagram: "",  // 不带 @，例如 "cake_pasing"
+};
+
+const PRICES = {
+  basque:  [["4寸", 18], ["6寸", 32], ["8寸", 42]],
+  chiffon: [["4寸", 20], ["6寸", 35], ["8寸", 45]],
+  roll:    [["半条", 9], ["整条", 18]],
+  piece:   [["1块", 4]],
+  other:   [["1份", null]],   // null = 价格待定，确定后改成数字
+};
+
+// photo：一张照片；photos：多张照片（第一张显示在卡片上，商品页可左右滑动）
+// pos：照片对焦位置，例如 "center 60%"；没有照片会显示线条插画
+// tint（没照片时的底色）：butter 黄、sage 绿、stone 灰、sand 米、rose 粉、lilac 紫
+const BASQUE = [
+  { name: "草莓抹茶", photos: [
+      { src: "images/strawberry-matcha-1.jpg", pos: "center 68%" },
+      { src: "images/strawberry-matcha-3.jpg", pos: "44% center" },
+      { src: "images/strawberry-matcha-4.jpg", pos: "37% center" },
+      { src: "images/strawberry-matcha-2.jpg", pos: "center 62%" },
+    ] },
+  { name: "栗子伯爵红茶", photos: [
+      { src: "images/chestnut-1.jpg", pos: "center 72%" },
+      { src: "images/chestnut-2.jpg", pos: "45% center" },
+      { src: "images/chestnut-3.jpg", pos: "50% center" },
+      { src: "images/chestnut-4.jpg", pos: "center 78%" },
+      { src: "images/chestnut-basque.jpg", pos: "center 62%" },
+      { src: "images/chestnut-5.jpg", pos: "center 55%" },
+    ] },
+  { name: "桂花芋泥", photos: [
+      { src: "images/taro-1.jpg", pos: "46% center" },
+      { src: "images/taro-2.jpg", pos: "center" },
+    ] },
+  { name: "茉莉青提抹茶", photos: [{ src: "images/jasmine-grape-matcha-1.jpg", pos: "center 60%" }] },
+  { name: "酒酿桂花", photos: [
+      { src: "images/osmanthus-wine-1.jpg", pos: "center 55%" },
+      { src: "images/osmanthus-wine-2.jpg", pos: "25% 42%" },
+    ] },
+  { name: "豆乳丸子黑芝麻", photos: [
+      { src: "images/black-sesame-1.jpg", pos: "center 55%" },
+      { src: "images/black-sesame-2.jpg", pos: "center 65%" },
+    ] },
+  { name: "Lotus 焦糖饼干", photos: [{ src: "images/lotus-1.jpg", pos: "55% center" }] },
+];
+const CHIFFON = [
+  { name: "栗子可可戚风", desc: "可可戚风配栗子奶油和糖渍栗子，4 / 6 / 8 寸可选。生日蛋糕请至少提前 2 天预订。", photos: [
+      { src: "images/chestnut-chiffon.jpg", pos: "center 40%" },
+      { src: "images/chestnut-chiffon-2.jpg", pos: "center 55%" },
+    ] },
+  { name: "茉莉抹茶戚风", desc: "茉莉抹茶奶油戚风，4 / 6 / 8 寸可选。生日蛋糕请至少提前 2 天预订。", photos: [
+      { src: "images/jasmine-matcha-chiffon-1.jpg", pos: "center 55%" },
+    ] },
+  { name: "海盐奥利奥戚风", desc: "海盐奥利奥奶油戚风，4 / 6 / 8 寸可选，装饰可以一起商量。生日蛋糕请至少提前 2 天预订。", photos: [
+      { src: "images/oreo-chiffon-1.jpg", pos: "center 62%" },
+    ] },
+  { name: "定制戚风", label: "奶油戚风（定制）", custom: true, tint: "rose" },
+];
+const ROLLS = [
+  { name: "咸奶油杏仁卷", tint: "butter" },
+  { name: "茉莉抹茶卷",   tint: "sage" },
+  { name: "黑芝麻抹茶卷", tint: "stone" },
+  { name: "伯爵红茶卷",   tint: "sand" },
+  { name: "原味红豆卷",   tint: "rose" },
+  { name: "蛋糕卷（口味待定）", tag: "口味待定", desc: "口味待定，确认后会更新。规格和价格同其他蛋糕卷，以当周供应为准。",
+    photos: [{ src: "images/roll-1.jpg", pos: "center 55%" }] },
+];
+const PIECES = [
+  { name: "栗子可可小方", tint: "lilac" },
+];
+// 其他小点心：价格还没定的写在 PRICES.other（null = 待定）
+const OTHERS = [
+  { name: "茉莉清酒提拉米苏", desc: "份量和价格待定，可以先下单询问。", photos: [{ src: "images/tiramisu-1.jpg", pos: "center 60%" }] },
+  { name: "小熊小蛋糕",       desc: "小熊造型的烤小蛋糕，品项和价格待定，可以先下单询问。", photos: [{ src: "images/bears-1.jpg", pos: "center 62%" }] },
+];
+/* ===================================== */
+
+const S = 'fill="currentColor" stroke="none"';
+const spark = (x, y) => `<path d="M${x} ${y - 4}c.4 2.6 1.4 3.6 4 4-2.6.4-3.6 1.4-4 4-.4-2.6-1.4-3.6-4-4 2.6-.4 3.6-1.4 4-4z"/>`;
+const ART = {
+  basque: `<svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="26" rx="18" ry="6"/><path d="M14 26v16a18 6 0 0 0 36 0V26"/><path d="M20 31.5v9M26 32.6v10M32 33v10M38 32.6v10M44 31.5v9"/><path d="M22 25c3-2 6 1 9-1s6 1 9-1"/>${spark(53, 12)}<circle cx="11" cy="15" r="1.1" ${S}/><circle cx="56" cy="34" r="1.1" ${S}/></svg>`,
+  chiffon: `<svg viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="34" rx="16" ry="5"/><path d="M16 34v14a16 5 0 0 0 32 0V34"/><path d="M16 41c2.7 3 5.3 3 8 0s5.3 3 8 0 5.3 3 8 0 5.3 3 8 0"/><rect x="30" y="20" width="4" height="12" rx="1"/><path d="M32 17c-2.5-2.5-1-5.5 0-8 1 2.5 2.5 5.5 0 8z"/>${spark(50, 14)}<circle cx="13" cy="22" r="1.1" ${S}/><circle cx="54" cy="28" r="1.1" ${S}/></svg>`,
+  roll: `<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M24 20h18a6 14 0 0 1 0 28H24"/><circle cx="24" cy="34" r="14"/><path d="M24 34a2 2 0 0 1 4 0a4 4 0 0 1-8 0a6 6 0 0 1 12 0a8 8 0 0 1-16 0"/>${spark(53, 12)}<circle cx="10" cy="14" r="1.1" ${S}/><circle cx="56" cy="52" r="1.1" ${S}/></svg>`,
+  piece: `<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 28l18-9 18 9-18 9z"/><path d="M14 28v12l18 9 18-9V28"/><path d="M32 37v12"/><path d="M14 34l18 9 18-9"/><circle cx="27" cy="26" r=".9" ${S}/><circle cx="33" cy="24" r=".9" ${S}/><circle cx="38" cy="28" r=".9" ${S}/><circle cx="31" cy="30" r=".9" ${S}/>${spark(52, 12)}<circle cx="10" cy="16" r="1.1" ${S}/></svg>`,
+  sizes: `<svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="34" r="19"/><circle cx="32" cy="34" r="12.5"/><circle cx="32" cy="34" r="6"/>${spark(53, 10)}<circle cx="10" cy="14" r="1.1" ${S}/></svg>`,
+  notes: `<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="18" y="12" width="28" height="40" rx="2"/><path d="M24 21h16M24 27h16M24 33h10"/><path d="M32 46.5c-3-2-5-3.6-5-5.6a2.5 2.5 0 0 1 5-1 2.5 2.5 0 0 1 5 1c0 2-2 3.6-5 5.6z"/>${spark(53, 14)}<circle cx="11" cy="20" r="1.1" ${S}/></svg>`,
+};
+const BASKET_ADD = `<svg viewBox="0 0 36 36" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13h24l-2.6 11.6a2 2 0 0 1-2 1.6H8.6a2 2 0 0 1-2-1.6z"/><path d="M11 13l4-7M21 13l-4-7"/><circle cx="27" cy="26" r="6.5" fill="currentColor" stroke="none"/><path d="M27 22.8v6.4M23.8 26h6.4" style="stroke:var(--paper)"/></svg>`;
+
+const KIND = {
+  basque:  { art: "basque",  group: "风味巴斯克",   tag: "4 / 6 / 8 寸", desc: "巴斯克芝士蛋糕，4 / 6 / 8 寸可选，接单后新鲜制作。" },
+  chiffon: { art: "chiffon", group: "奶油戚风",     tag: "需提前 2 天",  desc: "口味、夹心及装饰可定制，复杂造型另行报价。生日蛋糕请至少提前 2 天预订。" },
+  roll:    { art: "roll",    group: "蛋糕卷",       tag: "当周供应",     desc: "手作蛋糕卷，半条或整条，以当周供应为准。" },
+  piece:   { art: "piece",   group: "切块甜点",     tag: "当周供应",     desc: "切块甜点，按块计价，以当周供应为准。" },
+  other:   { art: "piece",   group: "小点心",       tag: "价格待定",     desc: "价格待定，可以先下单询问。" },
+};
+
+const ITEMS = [
+  ...BASQUE.map((f) => ({ ...f, label: f.name + "巴斯克", kind: "basque" })),
+  ...CHIFFON.map((c) => ({ ...c, label: c.label || c.name, kind: "chiffon" })),
+  ...ROLLS.map((r) => ({ ...r, label: r.name, kind: "roll" })),
+  ...PIECES.map((p) => ({ ...p, label: p.name, kind: "piece" })),
+  ...OTHERS.map((o) => ({ ...o, label: o.name, kind: "other" })),
+];
+
+const $ = (id) => document.getElementById(id);
+const el = (tag, props = {}, kids = []) => {
+  const n = Object.assign(document.createElement(tag), props);
+  kids.forEach((k) => n.append(k));
+  return n;
+};
+const euro = (n) => n + " €";
+const priceText = (it, sum) => sum == null ? "价格待定" : euro(sum) + (it.kind === "chiffon" ? " 起" : "");
+const fromPrice = (it) => {
+  const ps = PRICES[it.kind];
+  if (ps.some((p) => p[1] == null)) return "价格待定";
+  if (it.kind === "piece") return euro(ps[0][1]) + " / 块";
+  return euro(Math.min(...ps.map((p) => p[1]))) + " 起";
+};
+
+// shop name + contacts
+const SHOP = CONFIG.shopNameEn + " " + CONFIG.shopNameZh;
+document.querySelectorAll(".js-logo").forEach((n) => n.replaceChildren(el("span", { className: "en", textContent: CONFIG.shopNameEn }), el("span", { className: "zh", textContent: CONFIG.shopNameZh })));
+document.title = SHOP + "｜手作蛋糕预订｜慕尼黑 Pasing";
+const contacts = $("contacts");
+if (CONFIG.whatsapp) contacts.append(el("a", { href: "https://wa.me/" + CONFIG.whatsapp, textContent: "WhatsApp " + (CONFIG.whatsappLabel || "+" + CONFIG.whatsapp) }));
+if (CONFIG.wechat) contacts.append(el("span", { textContent: "微信 " + CONFIG.wechat }));
+if (CONFIG.instagram) contacts.append(el("a", { href: "https://instagram.com/" + CONFIG.instagram, textContent: "Instagram @" + CONFIG.instagram }));
+
+// menu
+const menuBtn = $("menu-btn"), menu = $("menu");
+menuBtn.addEventListener("click", () => {
+  const open = menu.hidden;
+  menu.hidden = !open;
+  menuBtn.setAttribute("aria-expanded", String(open));
+  menuBtn.setAttribute("aria-label", open ? "关闭菜单" : "打开菜单");
+});
+menu.addEventListener("click", (e) => { if (e.target.closest("a")) { menu.hidden = true; menuBtn.setAttribute("aria-expanded", "false"); } });
+
+// categories
+[["巴斯克", "#basque", "basque"], ["奶油戚风", "#chiffon", "chiffon"], ["蛋糕卷", "#weekly", "roll"],
+ ["小点心", "#weekly", "piece"], ["尺寸价格", "#sizes", "sizes"], ["预订须知", "#faq", "notes"]].forEach(([label, href, art]) => {
+  const b = el("span", { className: "bubble art" }); b.innerHTML = ART[art];
+  $("cats").append(el("li", {}, [el("a", { href }, [b, el("span", { textContent: label })])]));
+});
+
+// price table
+[["巴斯克芝士", PRICES.basque], ["奶油戚风", PRICES.chiffon]].forEach(([label, rows]) => {
+  const tr = el("tr", {}, [el("th", { scope: "row", textContent: label })]);
+  rows.forEach(([, p]) => tr.append(el("td", { textContent: euro(p) })));
+  $("price-rows").append(tr);
+});
+
+const photosOf = (it) => it.photos || (it.photo ? [{ src: it.photo, pos: it.pos }] : []);
+
+function mediaInner(it, box) {
+  const ph = photosOf(it);
+  if (ph.length) {
+    const img = el("img", { src: ph[0].src, alt: "", loading: "lazy" });
+    if (ph[0].pos) img.style.objectPosition = ph[0].pos;
+    box.append(img);
+  } else {
+    if (it.tint) box.style.background = `var(--tint-${it.tint})`;
+    const a = el("span", { className: "art" }); a.innerHTML = ART[KIND[it.kind].art];
+    box.append(a);
+  }
+  return box;
+}
+
+function card(i) {
+  const it = ITEMS[i];
+  const media = mediaInner(it, el("button", { type: "button", className: "media" }));
+  media.setAttribute("aria-label", "查看 " + it.label);
+  media.dataset.open = String(i);
+  media.append(el("span", { className: "tag", textContent: it.tag || KIND[it.kind].tag }));
+  const add = el("button", { type: "button", className: "icon-btn add" });
+  add.setAttribute("aria-label", "把 " + it.label + " 加入预订单");
+  add.dataset.add = String(i);
+  add.innerHTML = BASKET_ADD;
+  return el("article", { className: "card" }, [
+    media,
+    el("div", { className: "info" }, [
+      el("div", {}, [el("div", { className: "name", textContent: it.name }), el("div", { className: "price", textContent: fromPrice(it) })]),
+      add,
+    ]),
+  ]);
+}
+
+ITEMS.forEach((it, i) => {
+  if (it.kind === "basque") $("basque-rail").append(card(i));
+  if (it.kind === "chiffon") $("chiffon-grid").append(card(i));
+  if (it.kind === "roll" || it.kind === "piece" || it.kind === "other") $("weekly-grid").append(card(i));
+});
+
+// ---------- basket ----------
+const cart = [];
+const toastEl = $("toast");
+let toastTimer;
+function toast(msg) {
+  toastEl.textContent = msg;
+  toastEl.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toastEl.classList.remove("show"), 2200);
+}
+
+function info(l) {
+  const it = ITEMS[l.item];
+  const sizes = PRICES[it.kind];
+  const [sizeLabel, price] = sizes[l.size];
+  return { it, sizes, sizeLabel, price, sum: price == null ? null : price * l.qty };
+}
+
+function merge() {
+  for (let a = 0; a < cart.length; a++)
+    for (let b = cart.length - 1; b > a; b--)
+      if (cart[a].item === cart[b].item && cart[a].size === cart[b].size) { cart[a].qty = Math.min(20, cart[a].qty + cart[b].qty); cart.splice(b, 1); }
+}
+
+function totals() {
+  let total = 0, tbd = false, from = false;
+  cart.forEach((l) => { const { it, sum } = info(l); if (sum == null) tbd = true; else total += sum; if (it.kind === "chiffon") from = true; });
+  if (tbd && total === 0) return { text: "待定", tbd };
+  return { text: euro(total) + (from ? " 起" : "") + (tbd ? " ＋ 待定" : ""), tbd };
+}
+
+function addToCart(item, size, qty) {
+  cart.push({ item, size, qty });
+  merge();
+  renderCart();
+  const { it, sizes, sizeLabel } = info({ item, size, qty });
+  toast("已加入预订单：" + it.label + (sizes.length > 1 ? " " + sizeLabel : ""));
+}
+
+const pad = (n) => String(n).padStart(2, "0");
+const isoDate = (d) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+const daysFromNow = (n) => { const d = new Date(); d.setDate(d.getDate() + n); return d; };
+
+function renderCart() {
+  const count = cart.reduce((s, l) => s + l.qty, 0);
+  document.querySelectorAll(".js-count").forEach((b) => { b.textContent = count; });
+  $("fab").hidden = count === 0;
+
+  const box = $("lines");
+  box.replaceChildren();
+  if (!cart.length) {
+    box.append(el("div", { className: "empty" }, [
+      el("p", { textContent: "预订单还是空的，先挑一款蛋糕吧。" }),
+      el("a", { className: "btn btn-outline", href: "#basque", textContent: "去挑蛋糕" }),
+    ]));
+    $("sum-row").hidden = true;
+  } else {
+    const list = el("div", { className: "lines" });
+    cart.forEach((l, idx) => {
+      const { it, sizes, sum } = info(l);
+      const thumb = mediaInner(it, el("div", { className: "thumb" }));
+      const body = el("div", {}, [el("div", { className: "line-name", textContent: it.label })]);
+      if (sizes.length > 1) {
+        const sel = el("select", { className: "line-size" });
+        sel.setAttribute("aria-label", it.label + " 的尺寸");
+        sizes.forEach(([s, p], si) => sel.append(el("option", { value: String(si), textContent: `${s}  ${euro(p)}`, selected: si === l.size })));
+        sel.addEventListener("change", () => { l.size = Number(sel.value); merge(); renderCart(); });
+        body.append(sel);
+      } else {
+        body.append(el("div", { className: "line-meta", textContent: sizes[0][1] == null ? "价格待定" : euro(sizes[0][1]) + " / 块" }));
+      }
+      const minus = el("button", { type: "button", textContent: "−" }); minus.setAttribute("aria-label", "减少 " + it.label);
+      const plus = el("button", { type: "button", textContent: "+" }); plus.setAttribute("aria-label", "增加 " + it.label);
+      minus.addEventListener("click", () => { l.qty = Math.max(1, l.qty - 1); renderCart(); });
+      plus.addEventListener("click", () => { l.qty = Math.min(20, l.qty + 1); renderCart(); });
+      const remove = el("button", { type: "button", className: "remove", textContent: "删除" });
+      remove.addEventListener("click", () => { cart.splice(idx, 1); renderCart(); });
+      body.append(el("div", { className: "line-tools" }, [el("div", { className: "qty" }, [minus, el("output", { textContent: l.qty }), plus]), remove]));
+      list.append(el("div", { className: "line" }, [thumb, body, el("div", { className: "line-price", textContent: sum == null ? "待定" : priceText(it, sum) })]));
+    });
+    box.append(list);
+    $("sum").textContent = totals().text;
+    $("sum-row").hidden = false;
+  }
+
+  const hasChiffon = cart.some((l) => ITEMS[l.item].kind === "chiffon");
+  $("date").min = isoDate(daysFromNow(hasChiffon ? 2 : 1));
+  $("date-hint").textContent = hasChiffon
+    ? "预订单里有生日蛋糕，请至少提前 2 天。慕尼黑 Pasing 自取，具体时间确认订单时再约。"
+    : "慕尼黑 Pasing 自取，具体时间确认订单时再约。";
+}
+
+// ---------- product sheet ----------
+const sheet = $("sheet");
+const sel = { item: 0, size: 0, qty: 1 };
+
+function openSheet(i) {
+  Object.assign(sel, { item: i, size: 0, qty: 1 });
+  const it = ITEMS[i];
+  $("sheet-crumbs").textContent = "全部甜点 › " + KIND[it.kind].group;
+  const m = $("sheet-media"); m.replaceChildren(); m.style.background = "";
+  const ph = photosOf(it), dots = $("sheet-dots");
+  dots.replaceChildren();
+  dots.hidden = ph.length < 2;
+  if (ph.length > 1) {
+    const g = el("div", { className: "gallery", tabIndex: 0 });
+    g.setAttribute("role", "region");
+    g.setAttribute("aria-label", it.label + " 的照片，左右滑动查看");
+    ph.forEach((p, n) => {
+      const img = el("img", { src: p.src, alt: `${it.label}（第 ${n + 1} 张，共 ${ph.length} 张）` });
+      if (p.pos) img.style.objectPosition = p.pos;
+      g.append(img);
+      dots.append(el("span", { className: n === 0 ? "on" : "" }));
+    });
+    g.addEventListener("scroll", () => {
+      const n = Math.round(g.scrollLeft / g.clientWidth);
+      [...dots.children].forEach((d, k) => d.classList.toggle("on", k === n));
+    }, { passive: true });
+    m.append(g);
+  } else {
+    mediaInner(it, m);
+    const img = m.querySelector("img"); if (img) { img.alt = it.label; img.loading = "eager"; }
+  }
+  $("sheet-title").textContent = it.label;
+  $("sheet-desc").textContent = it.desc || KIND[it.kind].desc;
+  $("sheet-size-label").textContent = it.kind === "roll" ? "规格" : "尺寸";
+  renderSheet();
+  if (sheet.showModal) sheet.showModal(); else sheet.setAttribute("open", "");
+}
+
+function renderSheet() {
+  const { it, sizes, sum } = info(sel);
+  const box = $("sheet-sizes");
+  box.replaceChildren();
+  $("sheet-size-wrap").hidden = sizes.length < 2;
+  box.style.gridTemplateColumns = `repeat(${Math.max(sizes.length, 2)}, minmax(0, 1fr))`;
+  sizes.forEach(([s, p], si) => {
+    const b = el("button", { type: "button", className: "size" }, [s, el("small", { textContent: euro(p) })]);
+    b.setAttribute("aria-pressed", String(si === sel.size));
+    b.addEventListener("click", () => { sel.size = si; renderSheet(); });
+    box.append(b);
+  });
+  $("sheet-qty").textContent = sel.qty;
+  $("sheet-price").textContent = priceText(it, sum);
+}
+
+$("sheet-minus").addEventListener("click", () => { sel.qty = Math.max(1, sel.qty - 1); renderSheet(); });
+$("sheet-plus").addEventListener("click", () => { sel.qty = Math.min(20, sel.qty + 1); renderSheet(); });
+$("sheet-close").addEventListener("click", () => sheet.close());
+$("sheet-add").addEventListener("click", () => { addToCart(sel.item, sel.size, sel.qty); sheet.close(); });
+$("chiffon-open").addEventListener("click", () => openSheet(ITEMS.findIndex((it) => it.custom)));
+
+document.addEventListener("click", (e) => {
+  const o = e.target.closest("[data-open]");
+  if (o) openSheet(Number(o.dataset.open));
+  const a = e.target.closest("[data-add]");
+  if (a) addToCart(Number(a.dataset.add), 0, 1);
+});
+
+// ---------- send ----------
+function prettyDate(v) {
+  const [y, m, d] = v.split("-").map(Number);
+  return `${m}月${d}日（周${"日一二三四五六"[new Date(y, m - 1, d).getDay()]}）`;
+}
+
+function showError(msg, field) {
+  const e = $("form-error");
+  e.textContent = msg; e.hidden = false;
+  ["date", "name"].forEach((id) => $(id).removeAttribute("aria-invalid"));
+  if (field) { field.setAttribute("aria-invalid", "true"); field.focus(); }
+}
+
+function buildMessage() {
+  $("form-error").hidden = true;
+  ["date", "name"].forEach((id) => $(id).removeAttribute("aria-invalid"));
+  if (!cart.length) { showError("预订单还是空的，先挑一款蛋糕吧。"); return null; }
+  const date = $("date"), name = $("name");
+  if (!date.value) { showError("请选择取货日期。", date); return null; }
+  if (date.value < date.min) { showError("最早只能预订 " + prettyDate(date.min) + " 取货。", date); return null; }
+  if (!name.value.trim()) { showError("请填写称呼，方便确认订单。", name); return null; }
+
+  const lines = ["你好！我想预订："];
+  cart.forEach((l) => {
+    const { it, sizes, sizeLabel, sum } = info(l);
+    lines.push(`- ${it.label}${sizes.length > 1 ? " " + sizeLabel : ""} × ${l.qty}（${priceText(it, sum)}）`);
+  });
+  const t = totals();
+  lines.push(`预计合计：${t.text}`);
+  if (t.tbd) lines.push("（有价格待定的品项，麻烦告知价格）");
+  lines.push(`取货日期：${prettyDate(date.value)}`);
+  lines.push(`称呼：${name.value.trim()}`);
+  const memo = $("memo").value.trim();
+  if (memo) lines.push(`备注：${memo}`);
+  return lines.join("\n");
+}
+
+$("send-wa").addEventListener("click", () => {
+  const msg = buildMessage();
+  if (!msg) return;
+  if (!CONFIG.whatsapp) { showError("店家还没有设置 WhatsApp 号码，请先用「复制订单」发微信。"); return; }
+  window.location.href = "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(msg);
+});
+
+$("copy-order").addEventListener("click", async () => {
+  const msg = buildMessage();
+  if (!msg) return;
+  const done = () => {
+    $("status").textContent = CONFIG.wechat
+      ? "已复制。打开微信，粘贴发给 " + CONFIG.wechat + " 就好。"
+      : "已复制。打开微信，粘贴发给店家就好。";
+  };
+  try { await navigator.clipboard.writeText(msg); done(); }
+  catch (_) {
+    const t = el("textarea", { value: msg });
+    t.setAttribute("readonly", ""); t.style.position = "fixed"; t.style.opacity = "0";
+    document.body.append(t); t.select();
+    try { document.execCommand("copy"); done(); } catch (__) { $("status").textContent = "复制失败，请手动截图订单内容。"; }
+    t.remove();
+  }
+});
+
+renderCart();
+</script>
+</body>
+</html>
